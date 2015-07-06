@@ -1,0 +1,30 @@
+{
+  "name": "metalsmith-metadata-convention",
+  "version": "0.0.1",
+  "description": "Metalsmith Metadata Convention Plugin",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "standard index.js test/index.js; mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RobLoach/metalsmith-metadata-convention"
+  },
+  "keywords": [
+    "metalsmith"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobLoach/metalsmith-metadata-convention/issues"
+  },
+  "homepage": "https://github.com/RobLoach/metalsmith-metadata-convention",
+  "devDependencies": {
+    "assert-dir-equal": "^1.0.1",
+    "metalsmith": "^1.7.0",
+    "mocha": "*",
+    "standard": "^4.3.3"
+  }
+}
