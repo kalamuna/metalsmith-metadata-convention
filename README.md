@@ -3,33 +3,11 @@
 [![Build Status](https://img.shields.io/travis/RobLoach/metalsmith-metadata-convention/master.svg)](https://travis-ci.org/RobLoach/metalsmith-metadata-convention)
 [![Dependency Status](https://david-dm.org/RobLoach/metalsmith-metadata-convention.png)](https://david-dm.org/RobLoach/metalsmith-metadata-convention)
 
-[Metalsmith](http://metalsmith.io) plugin to allow defining [Metadata](https://github.com/segmentio/metalsmith-metadata) by using file conventions.
+> [Metalsmith](http://metalsmith.io) plugin to allow defining [Metadata](https://github.com/segmentio/metalsmith-metadata) by using file conventions.
 
 ## Installation
 
     npm install --save metalsmith-metadata-convention
-
-## Usage
-
-Each collection metadata is constucted through files named `<name>.metadata`.
-
-### Example
-#### src/authors.metadata
-``` yaml
----
-Stephen King:
-  birthdate: 1947
-J. K. Rowling:
-  birthdate: 1965
-William Shakespeare:
-  birthdate: 1564
-Nora Roberts:
-  birthdate: 1950
----
-
-This is a list of authors that are loaded into Metalsmith metadata at:
-  metalsmith.metadata().authors
-```
 
 ### CLI
 
@@ -51,6 +29,29 @@ If you are using the JS Api for Metalsmith, then you can require the module and 
 var metadata = require('metalsmith-metadata-convention');
 
 metalsmith.use(metadata());
+```
+
+## Usage
+
+Each metadata object is constructed through files named `<name>.metadata`. All files with the `.metadata` extension are merged into Metalsmith's metadata object.
+
+### Example
+
+#### src/authors.metadata
+``` yaml
+---
+Stephen King:
+  birthdate: 1947
+J. K. Rowling:
+  birthdate: 1965
+William Shakespeare:
+  birthdate: 1564
+Nora Roberts:
+  birthdate: 1950
+---
+
+This is a list of authors that are loaded into Metalsmith metadata at:
+  metalsmith.metadata().authors
 ```
 
 ## License

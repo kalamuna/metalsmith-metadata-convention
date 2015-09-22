@@ -1,7 +1,8 @@
 'use strict'
 
 var path = require('path')
-var async = require('async')
+var asyncronous = require('async')
+var extend = require('extend')
 
 module.exports = function (opts) {
   return function (files, metalsmith, done) {
@@ -16,8 +17,10 @@ module.exports = function (opts) {
         // Find the name of the metadata.
         var name = path.basename(filename, '.metadata')
 
-        // Save the meta data.
-        metadata[name] = file
+        // Recursively merge the meta data.
+        var newMetadata = {}
+        newMetadata[name] = file
+        extend(true, metadata, newMetadata)
 
         // Remove the file since we've now processed it.
         delete files[filename]
@@ -26,6 +29,6 @@ module.exports = function (opts) {
       callback()
     }
 
-    async.forEachOf(files, processFile, done)
+    asyncronous.forEachOf(files, processFile, done)
   }
 }

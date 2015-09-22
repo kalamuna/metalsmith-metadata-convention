@@ -14,7 +14,11 @@ it('should match metadata from file conventions', function (done) {
       }
 
       // Ensure the metadata was loaded correctly.
-      assert.equal('bar', metalsmith.metadata().someMetaData.foo)
+      var metadata = metalsmith.metadata()
+      var data = metadata.someMetaData || {}
+
+      // Check if the property is correct.
+      assert.equal('bar', data.foo || false)
 
       // Check whether the files were build just file.
       assertDir('test/fixtures/basic/build', 'test/fixtures/basic/expected')
