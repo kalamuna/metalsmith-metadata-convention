@@ -5,7 +5,7 @@ var assert = require('assert')
 
 /* global it */
 it('should match metadata from file conventions', function (done) {
-  var metalsmith = Metalsmith('test/fixtures/basic')
+  var metalsmith = new Metalsmith('test/fixtures/basic')
   metalsmith
     .use(metadata())
     .build(function (err) {
