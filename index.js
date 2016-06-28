@@ -1,7 +1,7 @@
 'use strict'
 
 var path = require('path')
-var asyncronous = require('async')
+var async = require('async')
 var extend = require('extend')
 
 module.exports = function () {
@@ -29,6 +29,6 @@ module.exports = function () {
       callback()
     }
 
-    asyncronous.forEachOf(files, processFile, done)
+    async.forEachOf(files, processFile, done)
   }
 }

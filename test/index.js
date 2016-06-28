@@ -1,7 +1,7 @@
-var assertDir = require('assert-dir-equal')
-var metadata = require('../')
-var Metalsmith = require('metalsmith')
 var assert = require('assert')
+var assertDir = require('assert-dir-equal')
+var Metalsmith = require('metalsmith')
+var metadata = require('../')
 
 /* global it */
 it('should match metadata from file conventions', function (done) {
@@ -15,10 +15,10 @@ it('should match metadata from file conventions', function (done) {
 
       // Ensure the metadata was loaded correctly.
       var metadata = metalsmith.metadata()
-      var data = metadata.someMetaData || {}
+      var someMetaData = metadata.someMetaData || {}
 
       // Check if the property is correct.
-      assert.equal('bar', data.foo || false)
+      assert.equal('bar', someMetaData.foo || false)
 
       // Check whether the files were build just file.
       assertDir('test/fixtures/basic/build', 'test/fixtures/basic/expected')

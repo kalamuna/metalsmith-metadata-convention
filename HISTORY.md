@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.0: 2016-06-28
+
+- Updated dependencies
+
 ## v0.1.0: 2015-09-21
 
 - Added `extend` to allow merging of existing metadata
