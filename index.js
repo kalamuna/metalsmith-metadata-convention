@@ -1,24 +1,28 @@
 'use strict'
 
-var path = require('path')
-var async = require('async')
-var extend = require('extend')
+const path = require('path')
+const async = require('async')
+const extend = require('extend')
 
 module.exports = function () {
   return function (files, metalsmith, done) {
-    var metadata = metalsmith.metadata()
+    const metadata = metalsmith.metadata()
 
     /**
      * Process a file, saving it as metadata if needed.
+     *
+     * @param {string} file The file of which is being processed.
+     * @param {string} filename The name of the given file.
+     * @param {function} callback The callback to call when the function is finished.
      */
     function processFile(file, filename, callback) {
       // Check if it matches the convention.
       if (path.extname(filename) === '.metadata') {
         // Find the name of the metadata.
-        var name = path.basename(filename, '.metadata')
+        const name = path.basename(filename, '.metadata')
 
         // Recursively merge the meta data.
-        var newMetadata = {}
+        const newMetadata = {}
         newMetadata[name] = file
         extend(true, metadata, newMetadata)
 

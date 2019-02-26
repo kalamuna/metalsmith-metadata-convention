@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/RobLoach/metalsmith-metadata-convention",
   "devDependencies": {
-    "assert-dir-equal": "^1.0.1",
-    "metalsmith": "^2.0.1",
-    "mocha": "^3.1.2",
-    "xo": "^0.17.0"
+    "assert-dir-equal": "^1.1.0",
+    "metalsmith": "^2.3.0",
+    "mocha": "^6.0.2",
+    "xo": "^0.24.0"
   },
   "dependencies": {
-    "async": "^2.0.0-rc.6",
-    "extend": "^3.0.0"
+    "async": "^2.6.2",
+    "extend": "^3.0.2"
   }
 }
