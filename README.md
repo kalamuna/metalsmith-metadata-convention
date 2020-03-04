@@ -1,7 +1,7 @@
 # Metalsmith Metadata Convention Plugin [![NPM version](https://img.shields.io/npm/v/metalsmith-metadata-convention.svg)](https://www.npmjs.org/package/metalsmith-metadata-convention)
 
-[![Build Status](https://img.shields.io/travis/RobLoach/metalsmith-metadata-convention/master.svg)](https://travis-ci.org/RobLoach/metalsmith-metadata-convention)
-[![Dependency Status](https://david-dm.org/RobLoach/metalsmith-metadata-convention.png)](https://david-dm.org/RobLoach/metalsmith-metadata-convention)
+[![Build Status](https://travis-ci.org/kalamuna/metalsmith-metadata-convention.svg?branch=master)](https://travis-ci.org/kalamuna/metalsmith-metadata-convention)
+[![Dependencies Status](https://david-dm.org/kalamuna/metalsmith-metadata-convention/status.svg)](https://david-dm.org/kalamuna/metalsmith-metadata-convention)
 
 > [Metalsmith](http://metalsmith.io) plugin to allow defining [Metadata](https://github.com/segmentio/metalsmith-metadata) by using file conventions.
 
