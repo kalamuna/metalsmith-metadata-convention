@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.2: 2020-03-04
+
+- Updated dependencies
+
 ## v1.0.1: 2016-11-04
 
 - Updated dependencies
